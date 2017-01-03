@@ -1,8 +1,7 @@
 {
-  "name": "cloud-nodejs",
+  "name": "wizyroom-nodejs-bot",
   "version": "0.0.1",
   "description": "node.js: Build Your Own Custom WizyRoom Bot with Node.js",
-  "private": true,
   "author": "Wizy.io",
   "contributors": [
     {
@@ -10,6 +9,9 @@
       "email": "maher@wizy.io"
     }
   ],
+  "bugs": {
+    "url": "https://github.com/maherwizy/WizyRoom-Sample-Bot/issues"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/maherwizy/WizyRoom-Sample-Bot.git"
@@ -19,6 +21,7 @@
     "start": "node app.js",
     "monitor": "nodemon app.js"
   },
+  "homepage": "https://github.com/maherwizy/WizyRoom-Sample-Bot#readme",
   "dependencies": {
     "ejs": "~0.8.5",
     "express": "~3.4.4",

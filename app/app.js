@@ -2,11 +2,12 @@
 
 // set up ======================================================================
 // get all the tools we need
-var express  =   require('express');
-var fs = require ('fs');
-var app      =   express();
-var port     =   process.env.PORT || 8080;
+'use strict';
+var express    = require('express');
+var fs         = require ('fs');
+var app        = express();
 var operations = require('./main/operations');
+var port       = process.env.PORT || 8080;
 
 app.configure(function() {
 	// set up our express application
@@ -25,7 +26,7 @@ app.get('/', function(req, res, next) {
 	res.render('index.ejs');
 });
 
-//WIZYROOM CHATBOT
+//WIZYROOM CHATBOT URL : Data will be posted to this url from Wizyroom (your server url will look like : www.example.com/chatbot)
 app.post('/chatbot', function(req, res, next) {
 	operations.botOperation(req, res)
 });

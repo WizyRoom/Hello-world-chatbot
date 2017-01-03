@@ -11,7 +11,7 @@ module.exports = {
 	/***************************************************************************************
 	This will use a specefic bot to send a message to a specefic room.
 	****************************************************************************************/
-	botMessage: function(dbjson, message){
+	botCustomMessage: function(dbjson, message){
 		var postData = {
 		  'domain_id':     dbjson.domain_id,
 		  'membership_id': dbjson.bot_id,
