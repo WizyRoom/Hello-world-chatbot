@@ -1,7 +1,7 @@
 {
   "name": "wizyroom-nodejs-bot",
   "version": "0.0.1",
-  "description": "node.js: Build Your Own Custom WizyRoom Bot with Node.js",
+  "description": "node.js: Build Your Own Custom WizyRoom Chatbot with Node.js",
   "author": "Wizy.io",
   "contributors": [
     {
@@ -10,7 +10,7 @@
     }
   ],
   "bugs": {
-    "url": "https://github.com/maherwizy/WizyRoom-Sample-Bot/issues"
+    "url": "https://github.com/WizyRoom/Hello-world-chatbot/issues"
   },
   "repository": {
     "type": "git",
@@ -21,7 +21,7 @@
     "start": "node app.js",
     "monitor": "nodemon app.js"
   },
-  "homepage": "https://github.com/maherwizy/WizyRoom-Sample-Bot#readme",
+  "homepage": "https://github.com/WizyRoom/Hello-world-chatbot#readme",
   "dependencies": {
     "ejs": "~0.8.5",
     "express": "~3.4.4"
