@@ -67,7 +67,8 @@ function botOperation(req, res){
 }
 ```
 
-The sentence returned depends on message that is chatted while triggering the chatbot in Wizyroom. This message is captured and analysed by regular expressions.
+The chatbot reply depends on the message chatted by the user to the bot. The chatted message is analysed by regular expressions.
+
 
 For more bot examples Check this [link](https://github.com/WizyRoom/1.weather-chatbot) and learn how to retrieve data from external services.
 
