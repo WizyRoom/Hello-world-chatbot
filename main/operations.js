@@ -23,7 +23,7 @@ function botOperation(req, res){
 
 	}else if(message.body.toLowerCase().match(/tell me time please+/g) || message.body.toLowerCase().match(/time+/g)){
 		//message.body contain 'time' so here we now that the user want the time.
-		var textReply = "The time is :"+ new Date();
+		var textReply = "The time is: "+ new Date();
 		botApi.botDirectReply(res, textReply, is_reply);
 
 	}else{
