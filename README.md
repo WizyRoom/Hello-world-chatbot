@@ -91,9 +91,7 @@ In order to be able to deploy your bot we propose to use **Heroku.com**.
 
 ## WizyRoom integration
 
-Time to use our bot in Wizyroom and test it.
-
-
+Time to use your bot in Wizyroom and test it.
 
 1. Go to your Wizyroom account admin panel https://app.wizyroom.io/admin/integrations/chatbots
 2. Add chatbot
