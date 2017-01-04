@@ -64,7 +64,8 @@ function botOperation(req, res){
 	}
 
 	res.status(200).send({'body': textReply, 'is_reply':is_reply});
-}```
+}
+```
 
 The sentence returned depends on message that is chatted while triggering the chatbot in Wizyroom. This message is captured and analysed by regular expressions.
 
