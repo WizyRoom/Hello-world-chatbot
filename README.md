@@ -1,48 +1,81 @@
-# Welcome to the WizyRoom-Sample-Bot
+# Welcome to the Hello-World-Chatbot for [Wizyroom](https://app.wizyroom.io/secured/login?next_uri=Lw%3D%3D)
 
-WizyRoom-Sample-Bot is a Node.js [Wizyroom](https://app.wizyroom.io/secured/login?next_uri=Lw%3D%3D) chatbot.
+Hello-World-Chatbot is a Node.js chatbot for [Wizyroom](https://app.wizyroom.io/secured/login?next_uri=Lw%3D%3D). 
+In this example we propose to use [Ngrok](https://ngrok.com/download): a secure introspectable tunnels to your localhost, to test your chatbot locally without deploying it.
 
 ![chatbot](https://sites.google.com/a/wizy.io/sand/sandbox/chatbot.gif?attredirects=0)
+
+## Requirement
+
+* Wizyroom account
+* Hello-World-Chatbot
+* Ngrok
+* Heroku
 
 ## Installation
 
 The application has very minimal dependencies and requirements aside from a typical Node.js stack.
-this will run the bot localy use **ngrok** to secure introspectable tunnels to your localhost webhook 
 
 1. Simply clone this repository.
-2. Run the commande prompt.
+2. Run the prompt command.
 3. Install the dependencies via `npm install` under your project root file.
-3. Run the bot localy via `npm start` it will run on localhost:8080
-4. Download [Ngrok](https://ngrok.com/download) and extract file content in project path
-5. Run the commande prompt and run server via `ngrok http 8080`.
-* **Ngrok** is useful for developement to test your application before deploying it.
+4. Run the chatbot locally via `npm start` it will run on localhost:8080.
+5. Download [Ngrok](https://ngrok.com/download) and extract file content in project path.
+6. Run the commande prompt and run server via `ngrok http 8080`.
 
-## Developement
+## Development
 
-♦ How to redirect user to bot home page?
+* Create a get request to test the chatbot running
 
-`app.get('/', function(req, res, next) {
+```javascript
+app.get('/', function(req, res, next) {
 	res.render('index.ejs');
-});`
+});
+```
 
-♦ How to access the request body when POSTing using Node.js and Express?
+* Get the body of your request when using the **Node.js** framework **Express**
 
 `req.body` contain the posted data.
 
-`app.post('/chatbot', function(req, res, next) {
+```javascript
+app.post('/chatbot', function(req, res, next) {
 	operations.botOperation(req, res)
-});`
+});
+```
 
-♦ How to connect my bot to external services ?
+* This simple application will return a sentence everytime the chatbot is triggered in **Wizyroom**
 
-Check this [example](https://github.com/WizyRoom/1.weather-chatbot) to learn how to retrieve data from external services
+```javascript
+function botOperation(req, res){
+	var data = 	  req.body;
+	var message = data.message;
+	var bot =     data.bot;
+	var token =   data.token;
+
+	var is_reply = true
+
+	if(message.body.toLowerCase().match(/help+/g)){
+		var textReply = "Hello "+message.owner_name+", what can i help you with.";
+
+	}else if(message.body.toLowerCase().match(/tell me time please+/g) || message.body.toLowerCase().match(/time+/g)){
+		var textReply = "The time is: "+ new Date();
+	}else{
+		var textReply = "Hello "+message.owner_name+", i'm a sample bot.";
+	}
+
+	res.status(200).send({'body': textReply, 'is_reply':is_reply});
+}```
+
+The sentence returned depends on message that is chatted while triggering the chatbot in Wizyroom. This message is captured and analysed by regular expressions.
+
+For more bot examples Check this [example](https://github.com/WizyRoom/1.weather-chatbot) and learn how to retrieve data from external services.
 
 
 ## Deployment
 
-In order to be able to deploy our bot we will use **Heroku.com**.
+In order to be able to deploy your bot we propose to use **Heroku.com**.
 
-1. First of all [Fork](https://github.com/maherwizy/WizyRoom-Sample-Bot/wiki/_new#fork-destination-box) this project to you account
+1. First of all [Fork](https://github.com/maherwizy/WizyRoom-Sample-Bot/wiki/_new#fork-destination-box) this project to your account
 2. Log in or Sign up to Heroku.
 3. Go to [dashboard](https://dashboard.heroku.com/apps).
 4. Click new and create a new app.
@@ -50,21 +83,24 @@ In order to be able to deploy our bot we will use **Heroku.com**.
 6. Use **GitHub** for Deployment method.
 7. Connect **GitHub** to **Heroku** and authorize application.
 8. Now search for our project **WizyRoom-Sample-Bot** and connect it.
-9. Click on **Deploy Branche** Master.
-10. Once done you can view your app (you will see the bot home page) [example](https://wizyroom-sample-bot.herokuapp.com/)
+9. Click on **Deploy Branch** Master.
+10. Once deployment done you can view your app by clicking on Open app [example](https://hello-world-chatbot.herokuapp.com/)
 
 
 ## WizyRoom integration
 
 Time to use our bot in Wizyroom and test it.
 
-![Wizyroom](https://sites.google.com/a/wizy.io/sand/sandbox/bot_creation.PNG?attredirects=0)
 
-1. Go to you Wizyroom account admin panel https://app.wizyroom.io/admin/integrations/chatbots
+
+1. Go to your Wizyroom account admin panel https://app.wizyroom.io/admin/integrations/chatbots
 2. Add chatbot
-3. Specify all required fields (Server URL is the url of the deployed application on Heroku with **/chatbot** at the end of URLs) example : https://wizyroom-sample-bot.herokuapp.com/chatbot
+3. Specify all required fields (Server URL is the url of the deployed application on Heroku with **/chatbot** at the end of URLs) example : https://hello-world-chatbot.herokuapp.com/chatbot
+![Wizyroom](https://sites.google.com/a/wizy.io/sand/sandbox/bot_creation.PNG?attredirects=0)
 4. Go to a room and invite your bot
+![inviteBot](https://sites.google.com/a/wizy.io/sand/sandbox/add-bot.PNG?attredirects=0)
 5. Mention your created bot and start a conversation
+![inviteBot](https://sites.google.com/a/wizy.io/sand/sandbox/mention.PNG?attredirects=0)
 
 ## License
 

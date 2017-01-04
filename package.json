@@ -24,7 +24,6 @@
   "homepage": "https://github.com/maherwizy/WizyRoom-Sample-Bot#readme",
   "dependencies": {
     "ejs": "~0.8.5",
-    "express": "~3.4.4",
-    "request": "^2.79.0"
+    "express": "~3.4.4"
   }
 }
