@@ -3,7 +3,7 @@
 Hello-World-Chatbot is a Node.js chatbot for [Wizyroom](https://app.wizyroom.io/secured/login?next_uri=Lw%3D%3D). 
 In this example we propose to use [Ngrok](https://ngrok.com/download): a secure introspectable tunnels to your localhost, to test your chatbot locally without deploying it.
 
-![chatbot](https://sites.google.com/a/wizy.io/sand/sandbox/chatbot.gif?attredirects=0)
+![chatbot](https://sites.google.com/a/wizy.io/sand/sandbox/chatbot.gif)
 
 ## Requirement
 
@@ -96,11 +96,11 @@ Time to use your bot in Wizyroom and test it.
 1. Go to your Wizyroom account admin panel https://app.wizyroom.io/admin/integrations/chatbots
 2. Add chatbot
 3. Specify all required fields (Server URL is the url of the deployed application on Heroku with **/chatbot** at the end of URLs) example : https://hello-world-chatbot.herokuapp.com/chatbot
-![Wizyroom](https://sites.google.com/a/wizy.io/sand/sandbox/bot_creation.PNG?attredirects=0)
+![Wizyroom](https://sites.google.com/a/wizy.io/sand/sandbox/bot_creation.PNG)
 4. Go to a room and invite your bot
-![inviteBot](https://sites.google.com/a/wizy.io/sand/sandbox/add-bot.PNG?attredirects=0)
+![inviteBot](https://sites.google.com/a/wizy.io/sand/sandbox/add-bot.PNG)
 5. Mention your created bot and start a conversation
-![inviteBot](https://sites.google.com/a/wizy.io/sand/sandbox/mention.PNG?attredirects=0)
+![inviteBot](https://sites.google.com/a/wizy.io/sand/sandbox/mention.PNG)
 
 ## License
 
