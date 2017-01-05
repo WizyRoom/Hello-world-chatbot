@@ -26,9 +26,10 @@ The application has very minimal dependencies and requirements aside from a typi
 ## Development
 
 You can retrieve all documentation for Wizyroom API:
+
 	* [Incomming Webhook](https://docs.google.com/document/d/1wcpJ4Y7O2OWyGvEmHb4a0mjmh7Nr6ObUlwaIRi1lj5k)
 	* [Outgoing Webhook](https://docs.google.com/document/d/1WwOL8bmiJLOC57VvnX4qlzInFrX3EN9ZhosJiu6iifI)
-	
+
 * Create a get request to test the chatbot running
 
 ```javascript
